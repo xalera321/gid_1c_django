@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1С:Гид</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="icon" href="{% static 'img/logo.ico' %}" type="image/x-icon">
+</head>
+<body class="bg-light">
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+            <a href="{% url 'index' %}" class="logo me-auto"><img src="{% static 'img/logo.svg' %}" alt="Логотип"></a>
+            <nav class="navbar navbar-expend-lg">
+                <ul>
+                    <li><a href="{% url 'training' %}">Конфигурации</a></li>
+                    <li><a href="{% url 'materials' %}">Материалы</a></li>
+                    <li><a href="{% url 'faq' %}">Ответы на вопросы</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+        </div>
+    </header>
+
+    <section class="container main">
+
+        <h1 class="mb-5">Обучающие материалы по 1С</h1>
+
+        <h2 class="text-center mb-5 clr-red">Полезные книги</h2>
+        
+        <div class="card-container row row-cols-1 row-cols-md-3 g-4 mb-5">
+            <div class="col">
+                <div class="custom-card">
+                    <a class="text-wh" href="https://v8.1c.ru/metod/books/42722.htm">
+                        <p>1С:Предприятие 8.3. Версия для обучения программированию</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-card">
+                    <a class="text-wh" href="https://v8.1c.ru/metod/books/174388.htm">
+                        <p>Разработка интерфейса прикладных решений на платформе «1С:Предприятие 8». Издание 2, стереотипное</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-card">
+                    <a class="text-wh" href="https://v8.1c.ru/metod/books/165944.htm">
+                        <p>Технологии интеграции 1С:Предприятия 8.3. Издание 2, стереотипное</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-card">
+                    <a class="text-wh" href="https://v8.1c.ru/metod/books/164672.htm">
+                        <p>1C:Предприятие 8.3. Практическое пособие разработчика. Используем 1С:EDT</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-card">
+                    <a class="text-wh" href="https://v8.1c.ru/metod/books/161314.htm">
+                        <p>1C:Предприятие 8.3. Практическое пособие разработчика. Примеры и типовые приемы. Издание 3</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-card">
+                    <a class="text-wh" href="https://v8.1c.ru/metod/books/155856.htm">
+                        <p>«1С:Предприятие.Элемент». Возможности встроенного языка</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-card">
+                    <a class="text-wh" href="https://v8.1c.ru/metod/books/50298.htm">
+                        <p>
+                            Облачные технологии «1С:Предприятия»
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-card">
+                    <a class="text-wh" href="https://v8.1c.ru/metod/books/45473.htm">
+                        <p>
+                            101 совет начинающим разработчикам в системе «1С:Предприятие 8»
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-card">
+                    <a class="text-wh" href="https://v8.1c.ru/metod/books/82433.htm">
+                        <p>Система взаимодействия. Коммуникации в бизнес-приложениях. Разработка в системе «1С:Предприятие 8.3»</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        
+
+
+        <h2 class="text-center mb-5 clr-red">Видеоролики</h2>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 b-video mb-5">
+                        <h3 class="long-title">
+                            Что такое платформа 1С Предприятие простым языком
+                        </h3>
+                        <div class="row">
+                            <div class="col-lg-11">
+                                <iframe width="100%" height="300" src="https://www.youtube.com/embed/lrGo5AHAy74?si=HZWC4ng9XigmWSAd"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 b-video mb-5">
+                        <h3 class="long-title">
+                            (2023) Полный курс по платформе 1С:Предприятие 8.3
+                        </h3>
+                        <div class="row">
+                            <div class="col-lg-11">
+                                <iframe width="100%" height="300" src="https://www.youtube.com/embed/videoseries?si=oypIrnakZMHsZg_v&amp;list=PLMAh-CUbKvat9SEUf_BgALVOelih1tdq_" frameborder="0"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 b-video mb-5">
+                        <h3 class="long-title">
+                            Учебная версия 1С Предприятие 8.3: где скачать бесплатно и как установить
+                        </h3>
+                        <div class="row">
+                            <div class="col-lg-11">
+                                <iframe width="100%" height="300" src="https://www.youtube.com/embed/gXYUsQcT7JI?si=iAPqV4DkMt9xNIc2" frameborder="0"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 b-video mb-5">
+                        <h3 class="long-title">
+                            Курс по "1С Предприятие: 8.2 для начинающих".
+                        </h3>
+                        <div class="row">
+                            <div class="col-lg-11">
+                                <iframe width="100%" height="300" src="https://www.youtube.com/embed/videoseries?si=BBvR55F-K9P_zHPP&amp;list=PLKSnLMoiML4mY-uBj0FCydN0waUChIWs_" frameborder="0"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 b-video mb-5">
+                        <h3 class="long-title col-lg-11">
+                            Самое быстрое обучение 1С - всего 1 урок с нуля
+                        </h3>
+                        <div class="row">
+                            <div class="col-lg-11">
+                                <iframe width="100%" height="300" src="https://www.youtube.com/embed/fiZdHxK9vdg?si=4P5gvZllBVT60q9s" frameborder="0"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 b-video mb-5">
+                        <h3 class="long-title col-lg-11">
+                            Основы 1С 8.3 для начинающих. Основы конфигурирования
+                        </h3>
+                        <div class="row">
+                            <div class="col-lg-11">
+                                <iframe width="100%" height="300" src="https://www.youtube.com/embed/videoseries?si=YsiwRZ31ZmFlNajN&amp;list=PLJ5kwji6NVSdMzjx0AQ_68Ay5E8ucz_vu" frameborder="0"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                    
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <footer>
+            <div class="d-flex flex-column flex-sm-row justify-content-between border-top pt-4 mt-4 mb-2">
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <p>
+                        &copy; <strong>«1С:Гид»</strong>. Все права защищены.
+                    </p>
+                    <p>
+                        г. Владимир, ул. Университетская, д. 4 <br>
+                        <strong>Телефон:</strong> <a href="tel:+79917462389">+7 991-746-23-89</a><br>
+                        <strong>Почта:</strong> <a href="mailto:1cgid@yandex.ru">1cgid@yandex.ru</a><br>
+                    </p>
+                </div>
+    
+                <ul class="social__links align-items-center d-flex justify-content-between">
+                    <li class="social__item ms-3">
+                        <a class="social__contacts bi" href="#" title="телеграм">
+                            <img class="social__img" src="{% static 'img/telegram.svg' %}" title="#" alt="телеграм">
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class=" social__contacts ms-3" href="#" title="вконтакте">
+                            <img class="social__img bi" src="{% static 'img/vk.svg' %}" title="#" alt="вконтакте">
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class=" social__contacts ms-3" href="#" title="ютуб">
+                            <img class="social__img bi" src="{% static 'img/youtube.svg' %}" title="#" alt="ютуб">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

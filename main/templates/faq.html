@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1С:Гид</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="icon" href="{% static 'img/logo.ico' %}" type="image/x-icon">
+</head>
+<body class="bg-light">
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+            <a href="{% url 'index' %}" class="logo me-auto"><img src="{% static 'img/logo.svg' %}" alt="Логотип"></a>
+            <nav class="navbar navbar-expend-lg">
+                <ul>
+                    <li><a href="{% url 'training' %}">Конфигурации</a></li>
+                    <li><a href="{% url 'materials' %}">Материалы</a></li>
+                    <li><a href="{% url 'faq' %}">Ответы на вопросы</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+        </div>
+    </header>
+    <section class="py-3 py-md-5 main">
+        <div class="container">
+            <div class="row gy-5 gy-lg-0">
+                <div class="col-12 col-lg-6 mx-auto" style="width: 300px;">
+                    <img loading="lazy" src="{% static 'img/obuchenie_1c.png' %}"
+                        alt="Обучение">
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <div class="row justify-content-xl-end">
+                        <div class="col-12 col-xl-11">
+                            <h1 class="h1 mb-3">Чем мы можем вам помочь?</h1>
+                            <p class="lead fs-4 text-secondary mb-5">Мы надеемся, что вы нашли ответ на свой вопрос. Если вам нужна какая-либо помощь, свяжитесь с нами по электронной почте.
+                            </p>
+                            <div class="accordion accordion-flush" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                            Что такое 1С: Предприятие?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Это единая платформа, предназначенная для автоматизации работы современного предприятия. Она дает возможность
+                                            интегрировать различные конфигурации, способные охватить все направления и сферы деятельности компании, обеспечить
+                                            достижение необходимых результатов в работе.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Что такое платформа и конфигурация?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Платформа обеспечивает работу конфигурации и позволяет вносить в нее изменения или создавать собственную конфигурацию.
+                                            Сама по себе платформа не может выполнить никаких задач автоматизации, так как она создана для обеспечения работы
+                                            какой-либо конфигурации. То же самое с конфигурацией: чтобы выполнить те задачи, для которых она создана, необходимо
+                                            наличие платформы, управляющей ее работой. Конфигурация предназначена для автоматизации одной определенной области
+                                            человеческой деятельности.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseThree" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            Как добавить новый объект конфигурации?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>Это можно сделать несколькими способами:</p>
+                                            <ul>
+                                                <li>Необходимо установить курсор на ту ветку объектов конфигурации, которая вас интересует, и в командной панели окна
+                                                конфигурации нажать кнопку Действия «Добавить».</li>
+                                                <li>Вы можете воспользоваться контекстным меню, которое вызывается при нажатии на правую клавишу мыши. Установите курсор на
+                                                интересующую вас ветку объектов конфигурации и нажмите правую клавишу мыши. В появившемся меню выберите пункт «Добавить».</li>
+                                                <li>Установите курсор на интересующую вас ветку объектов конфигурации и в командной панели окна конфигурации нажмите кнопку
+                                                «Добавить» (с пиктограммой +).</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFour">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                            Что такое палитра свойств
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Это специальное служебное окно, которое позволяет редактировать все свойства объекта конфигурации и другую связанную с
+                                            ним информацию. Поскольку разные объекты конфигурации имеют самые разные свойства, содержимое этого окна будет меняться
+                                            в зависимости от того, какой объект является текущим (на каком объекте конфигурации установлен курсор).
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFive">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                            Что такое дерево объектов конфигурации?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Это основной инструмент, с которым работает разработчик. Дерево объектов конфигурации содержит в себе практически всю
+                                            информацию о том, из чего состоит конфигурация.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingSix">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                            Что такое объекты конфигурации?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Это составные элементы, «детали», из которых складывается любое прикладное решение. Они представляют собой настраиваемые
+                                            объекты (объекты с настраиваемыми свойствами), поддерживаемые на уровне технологической платформы.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingSeven">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven"
+                                            aria-expanded="false" aria-controls="collapseSeven">
+                                            Как запустить «1С:Предприятие» в режиме отладки?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Для этого нужно выполнить пункт меню «Отладка» - «Начать отладку» или нажать соответствующую кнопку на панели инструментов
+                                            конфигуратора.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingEight">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                            Для чего используется объект конфигурации «Подсистема»?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Подсистемы – это основные элементы для построения интерфейса «1С:Предприятия». Объекты конфигурации «Подсистема» позволяют выделить в конфигурации функциональные части, на которые логически разбивается
+                                            создаваемое прикладное решение. Эти объекты располагаются в ветке объектов Общие и позволяют построить древовидную
+                                            структуру, состоящую из подсистем и подчиненных им подсистем.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingNine">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                            Для чего предназначен объект конфигурации «Справочник»?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Справочник предназначен для работы со списками данных. Свойства и структура списков описываются в объектах конфигурации
+                                            Справочник, на основе которых платформа создает в базе данных таблицы для хранения информации из этих справочников.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTen">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                            Каковы характерные особенности справочника?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Справочник состоит из элементов, каждый элемент представляет собой отдельную запись в таблице, хранящей информацию из
+                                            этого справочника. Элемент также может содержать дополнительную информацию, которая подробнее описывает этот элемент -
+                                            одинаковый для всех элементов справочника - реквизит. Реквизит также является объектом конфигурации.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingEleven">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven"
+                                            aria-expanded="false" aria-controls="collapseEleven">
+                                            Зачем нужны подчиненные справочники, и что такое «владелец»?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Элементы одного справочника могут быть подчинены элементам другого справочника, и в таком случае устанавливается связь
+                                            один-ко-многим. Также может быть использована связь один-к-одному, когда каждый элемент подчиненного справочника связан
+                                            с одним из элементов справочника - владельца.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwelve">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                                            Какие основные формы существуют у справочника?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>Форма элемента - используется для редактирования или создания элемента справочника.</li>
+                                                <li>Форма группы - используется для редактирования или создания группы справочника.</li>
+                                                <li>Форма списка - используется для отображения списка элементов в справочнике.</li>
+                                                <li>Форма выбора - используется для того, чтобы в поле некоторой формы выбрать один из элементов справочника.</li>
+                                                <li>Форма выбора группы - используется для выбора одной из группы справочника.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThirteen">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                                            Для чего предназначен объект конфигурации «Документ»?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Для описания информации о совершенных хозяйственных операциях или произошедших событий в организации. 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFourteen">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                                            Какими характерными особенностями обладает документ?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Способность проведения - событие, которое отображает документ, повлияло на состояние учета. Пока документ не проведен,
+                                            состояние учета неизменно, и документ не более чем черновик. Так же документ привязан к конкретному моменту времени.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFifteen">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                                            Для чего предназначены реквизиты и табличные части документа?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFifteen" class="accordion-collapse collapse" aria-labelledby="headingFifteen"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>Реквизиты предназначены для описания наборов одинаковой информации для всех документов одного вида, стандартные
+                                                    реквизиты - дата и номер документа.</li>
+                                                <li>Табличные части - для описания набора информации, которая одинакова по структуре, но различна по количеству.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingSixteen">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+                                            Что такое модуль, и для чего он нужен?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseSixteen" class="accordion-collapse collapse" aria-labelledby="headingSixteen"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>Модуль – это «хранилище» для текста программы на встроенном языке.</li>
+                                                <li>Модулей существует несколько, и каждый из них предназначен для описания алгоритмов, относящихся к тому или иному моменту
+                                                работы программы.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingSeventeen">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseSeventeen" aria-expanded="false" aria-controls="collapseSeventeen">
+                                            Зачем нужны общие модули?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseSeventeen" class="accordion-collapse collapse" aria-labelledby="headingSeventeen"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Они служат для хранения процедур, которые могут быть доступны для любых объектов конфигурации.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingEighteen">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseEighteen" aria-expanded="false" aria-controls="collapseEighteen">
+                                            Для чего предназначен объект конфигурации «Регистр накопления»?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseEighteen" class="accordion-collapse collapse" aria-labelledby="headingEighteen"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Для описания структуры накопления данных в удобном для последующего анализа виде. На основе объекта конфигурации «Регистр накопления» платформа создает в базе данных таблицы, в которых будут накапливаться данные, поставляемые
+                                            различными объектами базы данных.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingNineteen">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseNineteen" aria-expanded="false" aria-controls="collapseNineteen">
+                                            Для чего предназначен объект конфигурации «Отчет»?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseNineteen" class="accordion-collapse collapse" aria-labelledby="headingNineteen"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Отчет предназначен для описания алгоритмов, при помощи которых пользователь сможет получать необходимые ему выходные данные.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwenty">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwenty" aria-expanded="false" aria-controls="collapseTwenty">
+                                            Для чего предназначен объект конфигурации «Макет»?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwenty" class="accordion-collapse collapse" aria-labelledby="headingTwenty"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Для хранения различных форм представления данных, которые могут потребоваться каким-либо объектам конфигурации или всему
+                                            прикладному решению в целом. Одно из предназначений подчиненного макета - создание печатной формы этого объекта.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwentyOne">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwentyOne" aria-expanded="false" aria-controls="collapseTwentyOne">
+                                            Для чего предназначен объект конфигурации «Регистр сведений»?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwentyOne" class="accordion-collapse collapse" aria-labelledby="headingTwentyOne"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Для описания структуры хранения данных в разрезе нескольких измерений.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwentyTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwentyTwo" aria-expanded="false" aria-controls="collapseTwentyTwo">
+                                            Какими особенностями обладает объект конфигурации «Регистр сведений»?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwentyTwo" class="accordion-collapse collapse" aria-labelledby="headingTwentyTwo"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>Каждое движение регистра сведений устанавливает новое значение ресурса.</li>
+                                                <li>Способность (при необходимости) хранить данные с привязкой ко времени. Благодаря этому регистр сведений может хранить не только актуальные значения данных, но и историю их изменения во времени.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwentyThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwentyThree" aria-expanded="false" aria-controls="collapseTwentyThree">
+                                            В чем главные отличия регистра сведений от регистра накопления?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwentyThree" class="accordion-collapse collapse" aria-labelledby="headingTwentyThree"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>Принципиальное отличие регистра сведений от регистра накопления заключается в том, что каждое движение регистра сведений устанавливает новое значение ресурса, в то время как движение регистра накопления изменяет существующее значение ресурса. По этой причине регистр сведений может хранить любые данные (а не только числовые, как регистр накопления).</li>
+                                                <li>Регистр сведений предоставляет больше свободы в редактировании хранимых данных.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwentyFour">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwentyFour" aria-expanded="false" aria-controls="collapseTwentyFour">
+                                            Что такое периодический регистр сведений, и что такое независимый регистр сведений?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwentyFour" class="accordion-collapse collapse" aria-labelledby="headingTwentyFour"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>Периодический регистр сведений - это регистр сведений, использующий привязку ко времени.</li>
+                                                <li>Независимый регистр сведений - регистр сведений, не использующий подчинение регистратору.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwentyFive">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwentyFive" aria-expanded="false" aria-controls="collapseTwentyFive">
+                                            Что такое ведущее измерение регистра?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwentyFive" class="accordion-collapse collapse" aria-labelledby="headingTwentyFive"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Ведущее измерение регистра – запись регистра сведений имеет смысл, когда существует в базе данных объект, на который
+                                            ссылается данное измерение. Установка свойства Ведущее будет говорить о том, что запись регистра сведений представляет
+                                            интерес, пока существует тот объект, ссылка на который выбрана в качестве значения этого измерения в этой записи.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwentySix">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwentySix" aria-expanded="false" aria-controls="collapseTwentySix">
+                                            Для чего предназначен объект конфигурации «Перечисление»?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwentySix" class="accordion-collapse collapse" aria-labelledby="headingTwentySix"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Для описания структуры хранения постоянных наборов значений, не изменяемых в процессе работы конфигурации.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <footer>
+            <div class="d-flex flex-column flex-sm-row justify-content-between border-top pt-4 mt-4 mb-2">
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <p>
+                        &copy; <strong>«1С:Гид»</strong>. Все права защищены.
+                    </p>
+                    <p>
+                        г. Владимир, ул. Университетская, д. 4 <br>
+                        <strong>Телефон:</strong> <a href="tel:+79917462389">+7 991-746-23-89</a><br>
+                        <strong>Почта:</strong> <a href="mailto:1cgid@yandex.ru">1cgid@yandex.ru</a><br>
+                    </p>
+                </div>
+    
+                <ul class="social__links align-items-center d-flex justify-content-between">
+                    <li class="social__item ms-3">
+                        <a class="social__contacts bi" href="#" title="телеграм">
+                            <img class="social__img" src="{% static 'img/telegram.svg' %}" title="#" alt="телеграм">
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class=" social__contacts ms-3" href="#" title="вконтакте">
+                            <img class="social__img bi" src="{% static 'img/vk.svg' %}" title="#" alt="вконтакте">
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class=" social__contacts ms-3" href="#" title="ютуб">
+                            <img class="social__img bi" src="{% static 'img/youtube.svg' %}" title="#" alt="ютуб">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

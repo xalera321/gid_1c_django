@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1С:Гид</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="icon" href="{% static 'img/logo.ico' %}" type="image/x-icon">
+</head>
+<body>
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+            <a href="{% url 'index' %}" class="logo me-auto"><img src="{% static 'img/logo.svg' %}" alt="Логотип"></a>
+            <nav class="navbar navbar-expend-lg">
+                <ul>
+                    <li><a href="{% url 'training' %}">Конфигурации</a></li>
+                    <li><a href="{% url 'materials' %}">Материалы</a></li>
+                    <li><a href="{% url 'faq' %}">Ответы на вопросы</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+        </div>
+    </header>
+    <section class="container main">
+        <iframe class="pdf_file" src="{% static 'pdf/pp.pdf' %}"></iframe>
+    </section>
+    <div class="container">
+        <footer>
+            <div class="d-flex flex-column flex-sm-row justify-content-between border-top pt-4 mt-4 mb-2">
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <p>
+                        &copy; <strong>«1С:Гид»</strong>. Все права защищены.
+                    </p>
+                    <p>
+                        г. Владимир, ул. Университетская, д. 4 <br>
+                        <strong>Телефон:</strong> <a href="tel:+79917462389">+7 991-746-23-89</a><br>
+                        <strong>Почта:</strong> <a href="mailto:1cgid@yandex.ru">1cgid@yandex.ru</a><br>
+                    </p>
+                </div>
+    
+                <ul class="social__links align-items-center d-flex justify-content-between">
+                    <li class="social__item ms-3">
+                        <a class="social__contacts bi" href="#" title="телеграм">
+                            <img class="social__img" src="{% static 'img/telegram.svg' %}" title="#" alt="телеграм">
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class=" social__contacts ms-3" href="#" title="вконтакте">
+                            <img class="social__img bi" src="{% static 'img/vk.svg' %}" title="#" alt="вконтакте">
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class=" social__contacts ms-3" href="#" title="ютуб">
+                            <img class="social__img bi" src="{% static 'img/youtube.svg' %}" title="#" alt="ютуб">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
